@@ -1,4 +1,4 @@
-class Bomba
+class Mina
     def getContenido()
         return @car
     end
