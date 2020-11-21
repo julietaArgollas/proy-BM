@@ -1,6 +1,9 @@
 class Bomba
-
     def getContenido()
-        return ""
+        return @car
+    end
+
+    def setContenido(car)
+        @car = car
     end
 end
