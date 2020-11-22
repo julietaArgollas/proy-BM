@@ -16,4 +16,7 @@ class Mina
     def estadoDeLaCasilla()
         @estadoDeLaCasilla
     end
+    def cambiarEstadoDeLaCasilla()
+        @estadoDeLaCasilla = true
+    end
 end

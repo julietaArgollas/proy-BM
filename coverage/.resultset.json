@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "C:/Users/HP POWER/Desktop/IngeSoft-RUBY/PROY/proy v2/proy-BM/spec/buscaminas_spec.rb": {
+      "C:/Users/HP/Documents/BuscaMinasInge/spec/buscaminas_spec.rb": {
         "lines": [
           1,
           null,
@@ -11,49 +11,54 @@
           null
         ]
       },
-      "C:/Users/HP POWER/Desktop/IngeSoft-RUBY/PROY/proy v2/proy-BM/lib/buscaminas.rb": {
+      "C:/Users/HP/Documents/BuscaMinasInge/lib/buscaminas.rb": {
         "lines": [
           1,
           null,
           null
         ]
       },
-      "C:/Users/HP POWER/Desktop/IngeSoft-RUBY/PROY/proy v2/proy-BM/spec/mina_spec.rb": {
+      "C:/Users/HP/Documents/BuscaMinasInge/spec/mina_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          6,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "C:/Users/HP/Documents/BuscaMinasInge/lib/mina.rb": {
         "lines": [
           1,
           null,
           1,
           5,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "C:/Users/HP POWER/Desktop/IngeSoft-RUBY/PROY/proy v2/proy-BM/lib/mina.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          4,
-          4,
+          5,
           null,
           null,
           1,
@@ -67,11 +72,14 @@
           1,
           1,
           null,
+          1,
+          1,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1606007174
+    "timestamp": 1606007669
   },
   "Cucumber Features": {
     "coverage": {

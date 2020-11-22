@@ -18,9 +18,13 @@ RSpec.describe Mina do
         expect(@mina.getContenido).to eq("*")
     end
 
-    it 'deberia verificar si el estado de la casilla fue revelado' do
+    it 'deberia verificar si el estado de la casilla no fue revelado' do
         #@mina.estaRevelada()
         expect(@mina.estadoDeLaCasilla).to eq(false)
+    end
+    it 'deberia verificar si el estado de la casilla fue revelado' do
+        #@mina.estaRevelada()
+        expect(@mina.cambiarEstadoDeLaCasilla).to eq(true)
     end
 
 end
