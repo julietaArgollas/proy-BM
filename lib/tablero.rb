@@ -7,18 +7,26 @@ class Tablero
     def generarTablero()
         @filas=8
         @columnas=8
-        @tablero= Array.new(filas) { Array.new(columnas) {celda=Celda.new} }
+        @tablero= Array.new(filas) { Array.new(columnas) {mina=Mina.new} }
     end 
 
-    def generarTableroConMinas(posX,posY)
+    def mostrarMina(posX,posY)
         if (posX.to_i == 0 && posY.to_i == 0)
             return '*'
         end
     end
 
-    def generarTableroConEspaciosVacios(posX,posY)
+    def mostrarEspacioVacio(posX,posY)
         if (posX.to_i == 1 && posY.to_i == 1)
             return ' '
         end
     end
+    
+    def mostrarNumero(posX, posY)
+        if (posX.to_i == 0 && posY.to_i==1)
+            return '1'
+        end
+    end
+
+
 end
