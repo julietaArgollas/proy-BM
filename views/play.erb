@@ -1,101 +1,21 @@
-<html>
-	<head>
-	 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css">
-  		<link rel="stylesheet" href="styles.css">
-	<script>
-	
-	gContador=0;
-	function validarCelda(celda){
+	<div>
+		
+        <table class="egt" BORDER BGCOLOR="#B695C0" style="margin: 0 auto;">
+		<h1>BUSCAMINAS</h1>
+            <% for i in 0..8 %>
+                <tr>
+                    <% for j in 0..8 %>
+                        <td  style="WIDTH: 40px; HEIGHT: 40px" > <%=$tablero.get[i][j]%></td>
+                    <%end%>
+                </tr> 
+            <%end%>
+        </table>       
+    </div>
 
-			if (celda.value == "-1") {
-
-				celda.className="btn_Presionadomina";
-				alert('mina, Perdiste!! Puntos realizados '+ gContador); 
-				location.href="/resultado/"+gContador;
-				
-			}
-			else if (celda.value == "0") {
-
-				celda.className="btn_PresionadoVacio";
-				gContador +=1;
-			}
-		  	else{
-				celda.className="btn_PresionadoConValor";
-				celda.innerHTML="<h3>"+ celda.value +"</h3>";
-				gContador +=1;
-			}
-
-		return false;
-	}	
-	</script>
-	<style>
-			.tablero{
-				width: 416px;
-				height: 416px;								
-				border: 1px solid black;
-				margin-left: 33%;
-				margin-top: 120px;				
-			}
-
-			.btn_InicioJuego{
-				width: 70px;
-				height: 70px;
-				border: 1px solid black;
-				float: left;
-				background-color: #673AB7;				
-				font-size: 30;	
-				text-align: center;
-			}
-			.btn_PresionadoVacio{
-				width: 70px;
-				height: 70px;
-				border: 1px solid black;
-				float: left;
-				background-color: #FFFFFF;				
-				font-size: 30;	
-				text-align: center;
-			}
-
-			.btn_PresionadoConValor{
-				width: 70px;
-				height: 70px;
-				border: 1px solid black;
-				float: left;
-				text-align: center;
-			}
-
-			.btn_Presionadomina{
-				width: 70px;
-				height: 70px;
-				border: 1px solid black;
-				float: left;
-				background-color: #673AB7;
-				background: url(../img/mina.jpg) no-repeat;				
-				font-size: 30;	
-				text-align: center;
-			}
-
-
-		</style>
-</head>
-	<title>Buscaminas</title>
-	<body>
-        <h3>Buscaminas</h3>
-		<button class="btn Homepage">
-        	<a href="/ " class="linkPlay">Ir a la pagina principal</a>
-    	</button>
-		<br>
-		<br>
-		<main>
-    		<div>
-				<table>
-					<%= @tableroHTML %>
-				</table>
-			</div>
-		<br>
-		<br>
-		</main>
-	</body>
-</html>
+	</div>
+		<h1>Ingrese las coordenadas</h1>
+        <form method="post" action="/seleccionar">
+            <h4>PosicionX: <input type="text" name="x"  size="3" >   PosicionY: <input type="text" name="y" size="3"></h4>  
+            <input type="submit" value="Click"  >
+        </form>
+    </div>
