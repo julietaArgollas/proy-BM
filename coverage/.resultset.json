@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "C:/Users/HP POWER/Desktop/IngeSoft-RUBY/PROY/proy v2/proy-BM/spec/buscaminas_spec.rb": {
+      "C:/Users/HP/Documents/BuscaMinasInge/spec/buscaminas_spec.rb": {
         "lines": [
           1,
           1,
@@ -43,7 +43,7 @@
           null
         ]
       },
-      "C:/Users/HP POWER/Desktop/IngeSoft-RUBY/PROY/proy v2/proy-BM/lib/tablero.rb": {
+      "C:/Users/HP/Documents/BuscaMinasInge/lib/tablero.rb": {
         "lines": [
           1,
           null,
@@ -52,9 +52,7 @@
           1,
           null,
           1,
-          6,
-          6,
-          438,
+          546,
           null,
           null,
           1,
@@ -93,13 +91,13 @@
           null
         ]
       },
-      "C:/Users/HP POWER/Desktop/IngeSoft-RUBY/PROY/proy v2/proy-BM/lib/mina.rb": {
+      "C:/Users/HP/Documents/BuscaMinasInge/lib/mina.rb": {
         "lines": [
           1,
           null,
           1,
-          395,
-          395,
+          11,
+          11,
           null,
           null,
           1,
@@ -119,7 +117,7 @@
           null
         ]
       },
-      "C:/Users/HP POWER/Desktop/IngeSoft-RUBY/PROY/proy v2/proy-BM/spec/mina_spec.rb": {
+      "C:/Users/HP/Documents/BuscaMinasInge/spec/mina_spec.rb": {
         "lines": [
           1,
           null,
@@ -154,7 +152,7 @@
         ]
       }
     },
-    "timestamp": 1606057448
+    "timestamp": 1606073407
   },
   "Cucumber Features": {
     "coverage": {

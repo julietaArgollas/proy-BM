@@ -1,7 +1,7 @@
-	<div>
-		
+	<div>		
         <table class="egt" BORDER BGCOLOR="#B695C0" style="margin: 0 auto;">
-		<h1>BUSCAMINAS</h1>
+        <center><h1>BUSCAMINAS</h1></center>
+
             <% for i in 0..8 %>
                 <tr>
                     <% for j in 0..8 %>
@@ -9,13 +9,15 @@
                     <%end%>
                 </tr> 
             <%end%>
+
         </table>       
     </div>
 
 	</div>
-		<h1>Ingrese las coordenadas</h1>
+		<center><h1>Ingrese las coordenadas</h1>
         <form method="post" action="/seleccionar">
             <h4>PosicionX: <input type="text" name="x"  size="3" >   PosicionY: <input type="text" name="y" size="3"></h4>  
-            <input type="submit" value="Click"  >
+            <input type="submit" value="Aceptar"  >
         </form>
+        </center>
     </div>
