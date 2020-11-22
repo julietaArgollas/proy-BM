@@ -24,11 +24,15 @@ RSpec.describe Tablero do
         expect( @tablero.mostrarEspacioVacio(1,1)).to eq " "
     end      
     
-    it "verificar si una casilla del tablero contiene un numero" do
+    it "verificar si una casilla del tablero contiene el numero 1" do
         expect( @tablero.mostrarNumero(0,1)).to eq "1"
     end  
 
-    it "verificar si una casilla del tablero contiene un numero" do
+    it "verificar si una casilla del tablero contiene el numero 2" do
         expect( @tablero.mostrarNumero(2,1)).to eq "2"
-    end  
+    end
+
+    it "verificar si una casilla del tablero contiene el numero 3" do
+        expect( @tablero.mostrarNumero(3,1)).to eq "3"
+    end
 end

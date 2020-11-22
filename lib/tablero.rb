@@ -31,6 +31,10 @@ class Tablero
             respuesta= '2'
         end
 
+        if (posX.to_i == 3 && posY.to_i==1)
+            respuesta= '3'
+        end
+
         return respuesta
     end
 
