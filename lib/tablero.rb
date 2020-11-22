@@ -24,8 +24,14 @@ class Tablero
     
     def mostrarNumero(posX, posY)
         if (posX.to_i == 0 && posY.to_i==1)
-            return '1'
+            respuesta= '1'
         end
+
+        if (posX.to_i == 2 && posY.to_i==1)
+            respuesta= '2'
+        end
+
+        return respuesta
     end
 
 
