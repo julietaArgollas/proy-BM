@@ -17,7 +17,7 @@ RSpec.describe Tablero do
     end
 
     it "verificar si una casilla del tablero contiene una mina" do
-        expect( @tablero.mostrarMina(0,0)).to eq "*"
+        expect( @tablero.mostrarMina(5,1)).to eq "*"
     end   
 
     it "verificar si una casilla del tablero contiene un espacio vacio" do
@@ -25,14 +25,14 @@ RSpec.describe Tablero do
     end      
     
     it "verificar si una casilla del tablero contiene el numero 1" do
-        expect( @tablero.mostrarNumero(0,1)).to eq "1"
+        expect( @tablero.mostrarNumero(4,0)).to eq "1"
     end  
 
     it "verificar si una casilla del tablero contiene el numero 2" do
-        expect( @tablero.mostrarNumero(2,1)).to eq "2"
+        expect( @tablero.mostrarNumero(4,1)).to eq "2"
     end
 
     it "verificar si una casilla del tablero contiene el numero 3" do
-        expect( @tablero.mostrarNumero(3,1)).to eq "3"
+        expect( @tablero.mostrarNumero(1,3)).to eq "3"
     end
 end
