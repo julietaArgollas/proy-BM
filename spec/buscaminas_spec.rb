@@ -16,4 +16,10 @@ RSpec.describe Tablero do
         expect(@tablero.columnas).to eq 8        
     end
 
+    it "verificar si una casilla del tablero contiene una mina" do
+        @tablero.filas=8
+        @tablero.columnas=8
+        expect( @tablero.generarTableroConMinas(0,0)).to eq "*"
+    end      
+    
 end
