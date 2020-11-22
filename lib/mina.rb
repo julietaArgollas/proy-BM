@@ -1,9 +1,19 @@
 class Mina
-    def getContenido()
-        return @car
+
+    def initialize()
+        @caracter = " "
+        @estadoDeLaCasilla = false
     end
 
-    def setContenido(car)
-        @car = car
+    def getContenido()
+        @caracter
+    end
+
+    def setContenido(caracter)
+        @caracter = caracter
+    end
+
+    def estadoDeLaCasilla()
+        @estadoDeLaCasilla
     end
 end

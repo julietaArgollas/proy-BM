@@ -4,8 +4,8 @@ RSpec.describe Mina do
     before { @mina = Mina.new }
 
     it 'deberia de inicializarce la casilla con el contenido vacio' do
-        @mina.setContenido("")
-        expect(@mina.getContenido).to eq("")
+        #@mina.setContenido("")
+        expect(@mina.getContenido).to eq(" ")
     end
 
     it 'deberia de inicializarce la casilla con el contenido 1' do
@@ -16,6 +16,11 @@ RSpec.describe Mina do
     it 'deberia de inicializarce la casilla con una mina' do
         @mina.setContenido("*")
         expect(@mina.getContenido).to eq("*")
+    end
+
+    it 'deberia verificar si el estado de la casilla fue revelado' do
+        #@mina.estaRevelada()
+        expect(@mina.estadoDeLaCasilla).to eq(false)
     end
 
 end
