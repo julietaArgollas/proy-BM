@@ -20,6 +20,12 @@ RSpec.describe Tablero do
         @tablero.filas=8
         @tablero.columnas=8
         expect( @tablero.generarTableroConMinas(0,0)).to eq "*"
+    end   
+
+    it "verificar si una casilla del tablero contiene un espacio vacio" do
+        @tablero.filas=8
+        @tablero.columnas=8
+        expect( @tablero.generarTableroConEspaciosVacios(1,1)).to eq " "
     end      
     
 end
