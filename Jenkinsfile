@@ -17,7 +17,7 @@ pipeline {
     }
   stage ('rspec') {
       steps {
-        sh "rspec"
+        sh ""cepsr
       }
     }
   stage ('SonarQube analisis') {
