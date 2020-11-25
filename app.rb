@@ -12,3 +12,10 @@ post '/juego' do
     $tablero = Tablero.new
     erb :play
 end
+
+post '/seleccionar' do
+    $posX=params[:x]
+    $posY=params[:y]
+    $respuesta=$tablero.clic($posX,$posY)
+    erb :seleccionarCasilla
+end

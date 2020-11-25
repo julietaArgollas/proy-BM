@@ -1,0 +1,24 @@
+	<div>		
+        <table class="egt" BORDER BGCOLOR="#B695C0" style="margin: 0 auto;">
+        <center><h1>BUSCAMINAS</h1></center>
+
+            <% for i in 0..8 %>
+                <tr>
+                    <% for j in 0..8 %>
+                        <td  style="WIDTH: 40px; HEIGHT: 40px" > <%=$tablero.get[i][j]%></td>
+                    <%end%>
+                </tr> 
+            <%end%>
+
+        </table>  
+        <td align="center" style="WIDTH: 0px; HEIGHT:0 px" > <%=$tablero.colocarCaracter($posX,$posY,$respuesta)%></td>        
+    </div>
+
+	</div>
+		<center><h1>Ingrese las coordenadas</h1>
+        <form method="post" action="/seleccionar">
+            <h4>PosicionX: <input type="text" name="x"  size="3" >   PosicionY: <input type="text" name="y" size="3"></h4>  
+            <input type="submit" value="Aceptar"  >
+        </form>
+        </center>
+    </div>

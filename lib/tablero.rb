@@ -47,8 +47,22 @@ class Tablero
     def clic(posX, posY)
         if (posX.to_i > 9 || posY.to_i > 9)
             respuesta = 'No esta en el rango'
+        else
+            if mostrarMina(posX, posY) == '*'
+                respuesta = '*'
+            else
+                if mostrarEspacioVacio(posX, posY) == '.'
+                    respuesta = '.'
+                else
+                    respuesta = mostrarNumero(posX, posY)
+                end
+            end
         end
+    
         return respuesta
     end
-    
+    def colocarCaracter(posX,posY,mina)
+        @tablero[posX.to_i][posY.to_i] = mina
+    end
+
 end
