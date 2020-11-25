@@ -44,5 +44,11 @@ class Tablero
         return respuesta
     end
 
-
+    def clic(posX, posY)
+        if (posX.to_i > 9 || posY.to_i > 9)
+            respuesta = 'No esta en el rango'
+        end
+        return respuesta
+    end
+    
 end

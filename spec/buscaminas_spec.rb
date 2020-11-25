@@ -35,4 +35,8 @@ RSpec.describe Tablero do
     it "verificar si una casilla del tablero contiene el numero 3" do
         expect( @tablero.mostrarNumero(1,3)).to eq "3"
     end
+
+    it 'deberia devolver "No esta en el rango" si coloco las posicion x y la posicion y en una casilla que no existe dentro del rango' do
+        expect( @tablero.clic(10,10)). to eq('No esta en el rango')
+    end
 end
