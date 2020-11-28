@@ -61,8 +61,24 @@ class Tablero
     
         return respuesta
     end
+
     def colocarCaracter(posX,posY,mina)
         @tablero[posX.to_i][posY.to_i] = mina
+    end
+
+    def devuelveResultado(respuesta)
+        if (respuesta==false)
+            return 'Perdiste :('
+        else
+            return 'Ganaste :)'
+        end
+    end
+
+    def recorrerTablero(posX,posY)
+        if (mostrarMina(posX,posY)=='*')
+            respuestas=devuelveResultado(false)
+        end
+        return respuestas
     end
 
 end

@@ -37,6 +37,10 @@ RSpec.describe Tablero do
     end
 
     it 'deberia devolver "No esta en el rango" si coloco las posicion x y la posicion y en una casilla que no existe dentro del rango' do
-        expect( @tablero.clic(10,10)). to eq('No esta en el rango')
+        expect( @tablero.clic(10,10)).to eq('No esta en el rango')
+    end
+
+    it 'deberia devolver "Perdiste :(" si se ha seleccionado una casilla con bomba ' do
+        expect(@tablero.recorrerTablero(3,3)).to eq('Perdiste :(')
     end
 end
