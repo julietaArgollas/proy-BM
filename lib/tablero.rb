@@ -6,6 +6,12 @@ class Tablero
         @columnas = columnas
         @tablero = Array.new(filas){ Array.new(columnas) {@sinMina}}
         @tjugagor = Array.new(filas){ Array.new(columnas) {' '}}
+        @tableroMinas = Array.new(filas){ Array.new(columnas) {' '}}
+        for i in 0..filas-1
+            for j in 0..columnas-1
+                @tableroMinas[i][j]=i.to_s+":"+j.to_s 
+            end
+        end
     end
 
     def getFilas()
@@ -15,11 +21,17 @@ class Tablero
     def getColumnas()
         return @columnas
     end
+
     def getTableroJugador()
         return @tjugagor
     end
+
     def getTablero()
         return @tablero
+    end
+
+    def getTableroMinas()
+        return @tableroMinas
     end
 
     def mostrarMina(posX,posY)

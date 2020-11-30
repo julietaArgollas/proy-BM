@@ -19,6 +19,11 @@ RSpec.describe Tablero do
         expect(@tablero.getTableroJugador()).to eq([[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]])
     end
 
+    it 'deberia devolverme inicialmente las posiciones de la matriz sin minas marcadas con *' do
+        @tablero=Tablero.new(3,3)
+       expect(@tablero.getTableroMinas()).to eq([["0:0", "0:1", "0:2"], ["1:0", "1:1", "1:2"], ["2:0", "2:1", "2:2"]])
+   end
+   
 =begin
 [
 
