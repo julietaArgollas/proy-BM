@@ -54,6 +54,13 @@ RSpec.describe Tablero do
         expect(@tablero.getTablero()).to eq([[-3, 1], [1, 1]])  
     end
 
+    it 'deberia marcarme el espacio diciendo que no hay mina mediante el numero -1 si toque una casilla vacia' do
+        @tablero=Tablero.new(6,6)
+        @tablero.agregarMinas(0,0)
+        @tablero.agregarMinas(0,1)
+        expect(@tablero.marcarCasillaTablero(5,5)).to eq(-1)
+    end
+    
 =begin
 [
 

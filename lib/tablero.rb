@@ -11,7 +11,7 @@ class Tablero
         @filas = filas
         @columnas = columnas
         @tablero = Array.new(filas){ Array.new(columnas) {@sinMina}}
-        @tjugagor = Array.new(filas){ Array.new(columnas) {' '}}
+        @tjugador = Array.new(filas){ Array.new(columnas) {' '}}
         @tableroMinas = Array.new(filas){ Array.new(columnas) {' '}}
         for i in 0..filas-1
             for j in 0..columnas-1
@@ -29,7 +29,7 @@ class Tablero
     end
 
     def getTableroJugador()
-        return @tjugagor
+        return @tjugador
     end
 
     def getTablero()
@@ -80,6 +80,24 @@ class Tablero
                     @tablero[i][j] = contarMinasEnTablero(i,j)
                 end
             end
+        end
+    end
+
+    def marcarCasillaTablero(posX,posY) 
+        if((posX>=0 && posX<@columnas) && (posY>=0 && posY<@filas))   
+            if @tablero[posX][posY] == @mina
+                return @mina
+            else
+                if @tjugador[posX][posY] == ' '
+                    @contadorCasillas=@contadorCasillas+1
+                    @tjugador[posX][posY]=@tablero[posX][posY]
+                    return @sinMina
+                else
+                    return @mismaPosicion
+                end
+            end 
+        else
+            return @estaFueraDelTablero
         end
     end
 
