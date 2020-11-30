@@ -4,8 +4,17 @@ class Tablero
    
     attr_accessor :filas, :columnas, :tablero
 
-    def initialize()
-        @tablero= Array.new(9) { Array.new(9) { ' ' } }
+    def initialize(filas,columnas)
+        @sinMina = -1
+        @filas = filas
+        @columnas = columnas
+        @tablero = Array.new(filas){ Array.new(columnas) {@sinMina}}
+    end
+    def getFilas()
+        return @filas
+    end
+    def getColumnas()
+        return @columnas
     end
 
     def get()
