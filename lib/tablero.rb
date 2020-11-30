@@ -5,6 +5,7 @@ class Tablero
         @filas = filas
         @columnas = columnas
         @tablero = Array.new(filas){ Array.new(columnas) {@sinMina}}
+        @tjugagor = Array.new(filas){ Array.new(columnas) {' '}}
     end
 
     def getFilas()
@@ -14,7 +15,9 @@ class Tablero
     def getColumnas()
         return @columnas
     end
-
+    def getTableroJugador()
+        return @tjugagor
+    end
     def getTablero()
         return @tablero
     end

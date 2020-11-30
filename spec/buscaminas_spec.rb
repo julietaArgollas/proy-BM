@@ -9,10 +9,16 @@ RSpec.describe Tablero do
         expect(@tablero.getColumnas()).to eq(6)
     end
 
-    it 'deberia devolverme el contenido de la matriz en -1 que significa que no hay bombas' do    
+    it 'deberia devolverme el contenido de la matriz en -1 que significa que no exiten minas' do    
         @tablero=Tablero.new(3,3)
         expect(@tablero.getTablero()).to eq([[-1, -1, -1], [-1, -1, -1], [-1, -1, -1]])
     end
+
+    it 'deberia mostrarme la matriz inicial de la partida' do
+        @tablero=Tablero.new(3,3)
+        expect(@tablero.getTableroJugador()).to eq([[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]])
+    end
+
 =begin
 [
 
