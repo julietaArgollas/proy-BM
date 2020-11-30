@@ -32,6 +32,15 @@ class Tablero
         return @tjugagor
     end
 
+
+    def getTablero()
+        return @tablero
+    end
+
+    def getTableroMinas()
+        return @tableroMinas
+    end
+
     def agregarMinas(posX,posY)
         if((@filas-1)*(@columnas-1)) == @contadorMinas
             return @tableroLleno
@@ -51,14 +60,21 @@ class Tablero
         end
     end
 
-    def getTablero()
-        return @tablero
+    def contarMinasEnTablero(x,y)
+        nMinas = 0 
+        for i in x-1..x+1 
+            for j in y-1..y+1 
+                if (i >= 0 && i < @filas) && (j >= 0 && j < @columnas) 
+                    if @tablero[i][j] == @mina 
+                        nMinas=nMinas+1 
+                    end
+                end
+            end
+        end
+        return nMinas
     end
 
-    def getTableroMinas()
-        return @tableroMinas
-    end
-
+    #########################    
     def mostrarMina(posX,posY)
         if (posX.to_i == 5 && posY.to_i == 1 || posX.to_i == 3 && posY.to_i == 2 || posX.to_i == 2 && posY.to_i == 3 || posX.to_i == 3 && posY.to_i == 3 || posX.to_i == 0 && posY.to_i == 4 || posX.to_i == 2 && posY.to_i == 4 || posX.to_i == 3 && posY.to_i == 5 || posX.to_i == 5 && posY.to_i == 5 || posX.to_i == 0 && posY.to_i == 8 || posX.to_i == 5 && posY.to_i == 8)
             return '*'
@@ -127,5 +143,4 @@ class Tablero
         end
         return respuestas
     end
-
 end

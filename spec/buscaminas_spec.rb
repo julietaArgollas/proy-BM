@@ -21,20 +21,32 @@ RSpec.describe Tablero do
 
     it 'deberia devolverme inicialmente las posiciones de la matriz sin minas marcadas con *' do
         @tablero=Tablero.new(3,3)
-       expect(@tablero.getTableroMinas()).to eq([["0:0", "0:1", "0:2"], ["1:0", "1:1", "1:2"], ["2:0", "2:1", "2:2"]])
-   end
+        expect(@tablero.getTableroMinas()).to eq([["0:0", "0:1", "0:2"], ["1:0", "1:1", "1:2"], ["2:0", "2:1", "2:2"]])
+    end
 
-   it 'deberia poder agregar una mina en una posicion x y' do
+    it 'deberia poder agregar una mina en una posicion x y' do
         @tablero=Tablero.new(2,2)
         expect(@tablero.agregarMinas(0,0)).to eq(-3)
-   end
+    end
 
-   it 'deberia poder agregar mas de una mina en distintas posiciones posicion x y' do
+    it 'deberia poder agregar mas de una mina en distintas posiciones posicion x y' do
         @tablero=Tablero.new(4,4)
         expect(@tablero.agregarMinas(0,0)).to eq(-3)
         expect(@tablero.agregarMinas(0,1)).to eq(-3)
-   end
-   
+    end
+
+    it 'deberia devolverme -5 si puse la mina en una posicion fuera de del tablero' do
+        @tablero=Tablero.new(2,2)
+        expect(@tablero.agregarMinas(3,3)).to eq(-5)
+    end
+
+    it 'deberia devolverme la cantidad de minas que tengo alrededor de la posicion ingresada' do
+        @tablero=Tablero.new(4,4)
+        @tablero.agregarMinas(1,1)
+        @tablero.agregarMinas(1,3)
+        expect(@tablero.contarMinasEnTablero(1,2)).to eq(2)
+    end
+
 =begin
 [
 
