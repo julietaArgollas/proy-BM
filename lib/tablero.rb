@@ -1,23 +1,21 @@
-require './lib/mina.rb'
-
 class Tablero
    
-    attr_accessor :filas, :columnas, :tablero
-
     def initialize(filas,columnas)
         @sinMina = -1
         @filas = filas
         @columnas = columnas
         @tablero = Array.new(filas){ Array.new(columnas) {@sinMina}}
     end
+
     def getFilas()
         return @filas
     end
+
     def getColumnas()
         return @columnas
     end
 
-    def get()
+    def getTablero()
         return @tablero
     end
 

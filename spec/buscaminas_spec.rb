@@ -8,6 +8,11 @@ RSpec.describe Tablero do
         expect(@tablero.getFilas()).to eq(5)
         expect(@tablero.getColumnas()).to eq(6)
     end
+
+    it 'deberia devolverme el contenido de la matriz en -1 que significa que no hay bombas' do    
+        @tablero=Tablero.new(3,3)
+        expect(@tablero.getTablero()).to eq([[-1, -1, -1], [-1, -1, -1], [-1, -1, -1]])
+    end
 =begin
 [
 
