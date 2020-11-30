@@ -32,7 +32,6 @@ class Tablero
         return @tjugagor
     end
 
-
     def getTablero()
         return @tablero
     end
@@ -72,6 +71,16 @@ class Tablero
             end
         end
         return nMinas
+    end
+    #establece numeros en el tablero dependiendo la cantidad de minas que hay al rededor
+    def establecerNumerosEnTablero()
+        for i in  0..@filas-1
+            for j in 0..@columnas-1
+                if @tablero[i][j] == @sinMina
+                    @tablero[i][j] = contarMinasEnTablero(i,j)
+                end
+            end
+        end
     end
 
     #########################    

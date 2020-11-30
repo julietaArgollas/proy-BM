@@ -47,6 +47,13 @@ RSpec.describe Tablero do
         expect(@tablero.contarMinasEnTablero(1,2)).to eq(2)
     end
 
+    it 'deberia devolverme la matriz que en la posicion x=0 , y=0 que tiene una mina y se llena con unos' do
+        @tablero=Tablero.new(2,2)
+        @tablero.agregarMinas(0,0)
+        @tablero.establecerNumerosEnTablero()
+        expect(@tablero.getTablero()).to eq([[-3, 1], [1, 1]])  
+    end
+
 =begin
 [
 
