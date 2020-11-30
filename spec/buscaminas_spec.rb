@@ -23,6 +23,17 @@ RSpec.describe Tablero do
         @tablero=Tablero.new(3,3)
        expect(@tablero.getTableroMinas()).to eq([["0:0", "0:1", "0:2"], ["1:0", "1:1", "1:2"], ["2:0", "2:1", "2:2"]])
    end
+
+   it 'deberia poder agregar una mina en una posicion x y' do
+        @tablero=Tablero.new(2,2)
+        expect(@tablero.agregarMinas(0,0)).to eq(-3)
+   end
+
+   it 'deberia poder agregar mas de una mina en distintas posiciones posicion x y' do
+        @tablero=Tablero.new(4,4)
+        expect(@tablero.agregarMinas(0,0)).to eq(-3)
+        expect(@tablero.agregarMinas(0,1)).to eq(-3)
+   end
    
 =begin
 [

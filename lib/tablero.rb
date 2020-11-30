@@ -2,6 +2,12 @@ class Tablero
    
     def initialize(filas,columnas)
         @sinMina = -1
+        @tableroLleno = -2
+        @mina = -3
+        @mismaPosicion = -4
+        @estaFueraDelTablero = -5
+        @contadorCasillas = 0
+        @contadorMinas = 0
         @filas = filas
         @columnas = columnas
         @tablero = Array.new(filas){ Array.new(columnas) {@sinMina}}
@@ -24,6 +30,25 @@ class Tablero
 
     def getTableroJugador()
         return @tjugagor
+    end
+
+    def agregarMinas(posX,posY)
+        if((@filas-1)*(@columnas-1)) == @contadorMinas
+            return @tableroLleno
+        else
+            if((posX>=0 && posX<@columnas) && (posY>=0 && posY<@filas))   
+                if @tablero[posX][posY] != @mina
+                    @tablero[posX][posY] = @mina
+                    @tableroMinas[posX][posY]='*'
+                    @contadorMinas=@contadorMinas+1
+                return @mina
+                else
+                    return @mismaPosicion
+                end
+            else
+                return @estaFueraDelTablero
+            end 
+        end
     end
 
     def getTablero()
