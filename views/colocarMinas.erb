@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>Buscaminas </title>
+</head>
+<body>
+    <center>
+    <header>
+        <div clas="titlo-container">
+            <h1 class="titulo">Ingrese las minas para iniciar el juego</h1>         
+        </div>
+    </header>
+    </center>
+    <div class="main">
+        <center>   
+            <form method="post" action="/marcarMinas">
+                <h3>X: <input type="text" name="x"  size="3"> Y: <input type="text" name="y" size="3"></h3>  
+                <input type="submit" value="Marcar"  >
+            </form>
+
+            <%if @res == -5 %>
+                <h2>Se marco Incorrectamente !!</h2>
+            <% end %>
+
+            <%if @res == -4 %>
+                <h2>Marco la misma posicion de la casilla  !!</h2>
+            <% end %>
+
+            <%if @res == -2 %>
+                <h2>Ya no puede colocar mas bombas !!</h2>
+            <% end %>
+                                        
+            <table class="egt" BORDER BGCOLOR="#ECECEC" style="margin: 0 auto;">  
+                <% for i in 0..$tablero.getFilas-1 %>
+                    <tr>
+                        <% for j in 0..$tablero.getColumnas-1 %>      
+                            <td align="center" style="WIDTH: 40px; HEIGHT: 40px" ><%=$tablero.getTableroMinas[i][j]%></td>
+                        <%end%>                                                                    
+                    </tr> 
+                <%end%>
+            </table>   
+            <form method="post" action="/comenzarJuego">
+                <input type="submit" value="Comenzar Juego"  >
+            </form> 
+        </center>
+    </div>
+</body>
+</html>

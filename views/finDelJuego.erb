@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <head>
+        <title>Buscaminas </title>       
+    </head>
+<body>
+<header>
+    <div clas="titlo-container">
+        <h1 class="titulo">Perdiste <%=$nombre%> :(</h1>         
+    </div>    
+</header>
+    <div class="main">
+        <center>   
+            <form method="post" action="/volverAjugar">
+                <input type="submit" value="Volver A Jugar?"  >
+            </form> 
+            <table class="egt" BORDER BGCOLOR="#ECECEC" style="margin: 0 auto;"> 
+                <% for i in 0..$tablero.getFilas-1 %>   
+                     <tr>
+                        <% for j in 0..$tablero.getColumnas-1 %>         
+                            <% if $tablero.getTablero[i][j] == -1 %> 
+                                <td align="center" style="WIDTH: 40px; HEIGHT: 40px" >*</td>
+                            <% else %>
+                                <td align="center" style="WIDTH: 40px; HEIGHT: 40px" ><%=$tablero.getTablero[i][j]%></td>
+                            <%end%>
+                        <%end%>                                        
+                    </tr> 
+                <% end %>       
+            </table>
+        </center>
+    </div>
+</body>
+</html>
