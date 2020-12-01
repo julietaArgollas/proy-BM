@@ -61,6 +61,22 @@ RSpec.describe Tablero do
         expect(@tablero.marcarCasillaTablero(5,5)).to eq(-1)
     end
     
+    it 'deberia mostrarme false si perdi el juego tocando una mina' do
+        @tablero=Tablero.new(4,4)
+        @tablero.agregarMinas(2,2)
+        @tablero.agregarMinas(0,0)
+        @tablero.marcarCasillaTablero(0,0)
+        expect(@tablero.gano()).to eq(false)
+    end
+
+    it 'deberia mostrarme true si gane el juego sin tocar una mina' do
+        @tablero=Tablero.new(2,2)
+        @tablero.agregarMinas(0,0)
+        @tablero.marcarCasillaTablero(0,1)
+        @tablero.marcarCasillaTablero(1,0)
+        @tablero.marcarCasillaTablero(1,1)
+        expect(@tablero.gano()).to eq(true)
+    end
 =begin
 [
 
