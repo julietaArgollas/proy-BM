@@ -108,5 +108,5 @@ class Tablero
             return false
         end
     end
-    #########################    
+    ##################
 end

@@ -3,14 +3,20 @@ require './config'
 require './lib/tablero.rb'
 
 get '/' do
-    erb :homepage
+    erb :inicio
 end
 get '/reglas' do
     erb :reglas
 end
 post '/juego' do
-    $tablero = Tablero.new
-    erb :play
+    erb :jugar
+end
+post '/principiante' do
+    $tablero = Tablero.new(9,9)
+    erb :principiante
+end
+post '/personalizado' do
+    erb :personalizado
 end
 
 post '/seleccionar' do

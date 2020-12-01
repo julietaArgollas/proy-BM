@@ -7,21 +7,24 @@
     <title>Document</title>
 </head>
 <body>
+<center>
     <div class="container">
         <h1>Buscaminas</h1>
         <form method='post' action='/juego'>
-            <input type='submit' value='Comenzar' class="button">
+            <input type='submit' value='Jugar' class="button">
         </form>
         <br>
         <br>
-        <button class="btn btnInstructions">
-            <a href="/reglas" class="linkPlay">Reglas Del Juego</a>
-        </button>
+        <form method='get' action='/reglas'>
+            <input type='submit' value='reglas De Juego' class="button">
+        </form>
+
         <br>
         <br>
-        <button class="btn btnSalir">
-            <a href="/" class="linkPlay">Salir</a>
-        </button>    
-    </div>    
+        <form method='get' action='/'>
+            <input type='submit' value='salir' class="button">
+        </form>  
+    </div> 
+</center> 
 </body>
 </html>
