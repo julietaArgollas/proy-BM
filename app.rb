@@ -50,3 +50,10 @@ end
 post '/volverAjugar' do
     erb :jugar
 end
+
+get '/personalizado' do
+    @filas = params[:filas].to_i
+    @columnas = params[:columnas].to_i
+    $tablero = Tablero.new(@filas,@columnas)
+    erb :colocarMinas
+end
